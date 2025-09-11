@@ -1,0 +1,1572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thomas Webber | FINMA & FCA Licensed Financial Advisor & Asset Recovery Professional</title>
+    <meta name="description" content="Thomas Webber - FINMA & FCA Licensed Financial Advisor and Investigator & Asset Recovery Professional. Independent advisory services with H&W Invest since 2019.">
+    <meta property="og:title" content="Thomas Webber | Financial Advisor & Asset Recovery Professional">
+    <meta property="og:description" content="FINMA & FCA Licensed Financial Advisor and Asset Recovery Professional. Family-focused, client-first approach since 2019.">
+    <meta property="og:type" content="website">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #454545;
+            --secondary: #FF6000;
+            --accent: #FFA559;
+            --light: #FFE6C7;
+            --white: #ffffff;
+            --black: #000000;
+            --shadow: rgba(69, 69, 69, 0.1);
+            --shadow-heavy: rgba(69, 69, 69, 0.2);
+            --gradient-primary: linear-gradient(135deg, #FF6000 0%, #FFA559 100%);
+            --gradient-light: linear-gradient(135deg, #FFE6C7 0%, #ffffff 100%);
+            --gradient-dark: linear-gradient(135deg, #454545 0%, #FF6000 100%);
+        }
+
+        * {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.7;
+            color: var(--primary);
+            background: var(--white);
+            scroll-behavior: smooth;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+
+        h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); }
+        h2 { font-size: clamp(2rem, 4vw, 3.5rem); }
+        h3 { font-size: clamp(1.5rem, 3vw, 2.5rem); }
+        h4 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            opacity: 0.85;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--light);
+            transition: all 0.3s ease;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.75rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary);
+            transform: translateY(-1px);
+        }
+
+        .nav-links a:before {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover:before {
+            width: 100%;
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+
+        .mobile-menu span {
+            width: 28px;
+            height: 3px;
+            background: var(--secondary);
+            border-radius: 3px;
+            transition: all 0.3s ease;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.4s ease;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            margin: 0.5rem;
+            text-align: center;
+        }
+
+        .btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: left 0.7s ease;
+        }
+
+        .btn:hover:before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: var(--white);
+            box-shadow: 0 10px 30px rgba(255, 96, 0, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 96, 0, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--secondary);
+            border: 2px solid var(--secondary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--secondary);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: var(--gradient-light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(255, 96, 0, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(255, 165, 89, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 60% 20%, rgba(255, 230, 199, 0.3) 0%, transparent 40%);
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text h1 {
+            background: var(--gradient-dark);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-taglines {
+            margin-bottom: 2rem;
+        }
+
+        .tagline {
+            display: block;
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            padding: 0.5rem 0;
+        }
+
+        .tagline-primary {
+            color: var(--secondary);
+            background: linear-gradient(90deg, var(--secondary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .tagline-secondary {
+            color: var(--accent);
+            background: linear-gradient(90deg, var(--accent), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-bio {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 2rem;
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 96, 0, 0.2);
+            margin: 2rem 0;
+            box-shadow: 0 10px 40px var(--shadow);
+        }
+
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero-circle {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 6rem;
+            font-weight: 700;
+            color: var(--white);
+            box-shadow: 
+                0 0 60px rgba(255, 96, 0, 0.4),
+                0 20px 40px rgba(255, 96, 0, 0.3);
+            animation: float 8s ease-in-out infinite;
+            position: relative;
+        }
+
+        .hero-circle:before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: linear-gradient(45deg, var(--secondary), var(--accent), var(--secondary));
+            border-radius: 50%;
+            z-index: -1;
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(-15px) scale(1.05); }
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Sections */
+        .section {
+            padding: 6rem 0;
+            position: relative;
+        }
+
+        .section-alt {
+            background: var(--gradient-light);
+        }
+
+        .section-dark {
+            background: var(--primary);
+            color: var(--white);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gradient-primary);
+            border-radius: 4px;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .about-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 3rem;
+            border-radius: 25px;
+            box-shadow: 0 15px 50px var(--shadow);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 96, 0, 0.1);
+            transition: all 0.4s ease;
+        }
+
+        .about-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 70px var(--shadow-heavy);
+        }
+
+        .biography-short, .biography-full {
+            line-height: 1.8;
+        }
+
+        .biography-full {
+            display: none;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 2px solid var(--light);
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .biography-full.active {
+            display: block;
+        }
+
+        .personal-section {
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 2rem;
+            border-radius: 20px;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .family-info {
+            font-size: 1.1rem;
+            font-weight: 500;
+            opacity: 0.95;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 3rem;
+            border-radius: 25px;
+            text-align: center;
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(20px);
+        }
+
+        .service-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover:before {
+            transform: scaleX(1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 70px var(--shadow-heavy);
+            border-color: var(--light);
+        }
+
+        .service-icon {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            font-size: 2.5rem;
+            color: var(--white);
+            box-shadow: 0 15px 40px rgba(255, 96, 0, 0.3);
+        }
+
+        .service-features {
+            list-style: none;
+            text-align: left;
+            margin: 2rem 0;
+        }
+
+        .service-features li {
+            padding: 0.5rem 0;
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .service-features li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: bold;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .timeline:before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 4px;
+            height: 100%;
+            background: var(--gradient-primary);
+            border-radius: 4px;
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-right: auto;
+            margin-left: 0;
+            text-align: right;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-left: auto;
+            margin-right: 0;
+            text-align: left;
+        }
+
+        .timeline-content {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2.5rem;
+            border-radius: 20px;
+            width: 45%;
+            position: relative;
+            box-shadow: 0 15px 50px var(--shadow);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 96, 0, 0.1);
+            transition: all 0.4s ease;
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 70px var(--shadow-heavy);
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 25px;
+            height: 25px;
+            background: var(--secondary);
+            border-radius: 50%;
+            border: 5px solid var(--white);
+            box-shadow: 0 4px 20px rgba(255, 96, 0, 0.4);
+            z-index: 2;
+        }
+
+        .timeline-year {
+            background: var(--gradient-primary);
+            color: var(--white);
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        /* Blog Grid */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .blog-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 50px var(--shadow);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(255, 96, 0, 0.1);
+        }
+
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 70px var(--shadow-heavy);
+        }
+
+        .blog-content {
+            padding: 2rem;
+        }
+
+        .blog-meta {
+            color: var(--secondary);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 50px var(--shadow);
+            transition: all 0.4s ease;
+            text-align: center;
+            position: relative;
+            backdrop-filter: blur(20px);
+        }
+
+        .testimonial-card:before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 4rem;
+            color: var(--secondary);
+            font-weight: bold;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 70px var(--shadow-heavy);
+        }
+
+        .testimonial-quote {
+            font-style: italic;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--secondary);
+        }
+
+        /* Appointment Section */
+        .appointment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .appointment-option {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 15px 50px var(--shadow);
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
+            backdrop-filter: blur(20px);
+        }
+
+        .appointment-option:hover {
+            transform: translateY(-10px);
+            border-color: var(--secondary);
+            box-shadow: 0 25px 70px var(--shadow-heavy);
+        }
+
+        .appointment-form {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 3rem;
+            border-radius: 25px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 20px 60px var(--shadow-heavy);
+            backdrop-filter: blur(20px);
+        }
+
+        /* Contact Form */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(20px);
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1.5rem;
+            font-size: 1.5rem;
+            color: var(--white);
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border: 2px solid var(--light);
+            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--primary);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--secondary);
+            background: var(--white);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px var(--shadow);
+        }
+
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-top: 2px;
+            accent-color: var(--secondary);
+        }
+
+        .checkbox-group label {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: var(--primary);
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--black);
+            color: var(--white);
+            padding: 3rem 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h4 {
+            color: var(--secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-section p, .footer-section a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            line-height: 1.8;
+        }
+
+        .footer-section a:hover {
+            color: var(--secondary);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+        }
+
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container { padding: 0 1rem; }
+            
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(255, 255, 255, 0.98);
+                flex-direction: column;
+                padding: 2rem;
+                gap: 1.5rem;
+                border-top: 1px solid var(--light);
+                backdrop-filter: blur(20px);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                text-align: center;
+            }
+
+            .hero-circle {
+                width: 250px;
+                height: 250px;
+                font-size: 4rem;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .timeline-item {
+                margin-bottom: 2rem;
+            }
+
+            .timeline-content {
+                width: 90%;
+                margin: 0 auto !important;
+                text-align: left !important;
+            }
+
+            .timeline:before {
+                left: 1rem;
+            }
+
+            .timeline-dot {
+                left: 1rem;
+                transform: translateX(0);
+            }
+
+            .appointment-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 0 1rem; }
+            .section { padding: 4rem 0; }
+            
+            .hero-circle {
+                width: 200px;
+                height: 200px;
+                font-size: 3rem;
+            }
+
+            .service-card, .about-card, .testimonial-card {
+                padding: 2rem;
+            }
+
+            .appointment-form {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <div class="logo">Thomas Webber</div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#financial">Financial Services</a></li>
+                    <li><a href="#recovery">Asset Recovery</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#insights">Insights</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#appointment" class="btn btn-primary">Book Appointment</a></li>
+                </ul>
+                <div class="mobile-menu" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Thomas Webber</h1>
+                    <div class="hero-taglines">
+                        <span class="tagline tagline-primary">FINMA & FCA Licensed Financial Advisor</span>
+                        <span class="tagline tagline-secondary">Investigator & Asset Recovery Professional</span>
+                    </div>
+                    <div class="hero-bio">
+                        <p><strong>Born into a Swiss banking family in 1982,</strong> Thomas combines generational financial wisdom with modern expertise. After successful careers at Credit Suisse, ING, UBS, and Allianz, he now provides independent advisory services through H&W Invest, where family values shape his client-first approach.</p>
+                    </div>
+                    <div>
+                        <a href="#appointment" class="btn btn-primary">Book Appointment</a>
+                        <a href="#about" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-circle">TW</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section section-alt" id="about">
+        <div class="container">
+            <h2 class="section-title">About Thomas Webber</h2>
+            <div class="about-grid">
+                <div class="about-card animate-on-scroll">
+                    <h3>Professional Biography</h3>
+                    <div class="biography-short">
+                        <p>Born in 1982 in Schützenbrunnen, Switzerland, Thomas Webber grew up in a family deeply rooted in banking. From his father and grandfather, he inherited both knowledge and values, developing early on a passion for finance, investments, and understanding how financial systems shape people's lives.</p>
+                        <p>After completing his education, Thomas began his career at two of Europe's most respected institutions: Credit Suisse in Switzerland and ING Group in the Netherlands. Over more than seven years, he built strong expertise in wealth management, corporate finance, and international investments.</p>
+                    </div>
+                    <div class="biography-full" id="biographyFull">
+                        <p>Yet, he became increasingly disillusioned with traditional banking, where client interests were too often overshadowed by institutional profit. Choosing integrity over corporate comfort, Thomas transitioned into independent financial advisory, committed to delivering transparent, client-first solutions.</p>
+                        <p>He went on to strengthen his expertise with roles at UBS Wealth Management and Allianz Global Investors, gaining deeper knowledge in portfolio strategy, retirement planning, and alternative investments.</p>
+                        <p>Since 2019, Thomas has been a senior advisor at H&W Invest, where he has found his true professional calling: empowering individuals and families to secure their financial futures. At H&W Invest, he combines decades of knowledge with a transparent, ethical, and client-centered approach.</p>
+                        <p>Today, Thomas Webber is regarded as a trusted advisor across Europe — respected for his independence, professionalism, and unwavering commitment to protecting and growing his clients' wealth.</p>
+                    </div>
+                    <button class="btn btn-outline biography-toggle" onclick="toggleBiography()">
+                        <span id="toggleText">Read More</span>
+                    </button>
+                </div>
+                <div class="about-card animate-on-scroll">
+                    <h3>Licensed & Regulated</h3>
+                    <div style="margin-bottom: 2rem;">
+                        <p><strong>FINMA Licensed</strong><br>Swiss Financial Market Supervisory Authority</p>
+                        <p><strong>FCA Regulated</strong><br>Financial Conduct Authority (United Kingdom)</p>
+                        <p><strong>Professional Experience</strong><br>19+ Years in European Financial Services</p>
+                    </div>
+                    <div class="personal-section">
+                        <h4 style="color: white; margin-bottom: 1rem;">Family Values</h4>
+                        <p class="family-info">Thomas is happily married with four beloved children — three daughters and one son. Family is central to his values, fundamentally shaping his client-first approach to financial advisory and asset recovery services.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Financial Advisory Services -->
+    <section class="section" id="financial">
+        <div class="container">
+            <h2 class="section-title">Financial Advisory Services</h2>
+            <div class="services-grid">
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">💼</div>
+                    <h3>Wealth & Portfolio Management</h3>
+                    <p>Comprehensive investment strategies tailored to your goals, risk tolerance, and timeline. From traditional portfolios to alternative investments.</p>
+                    <ul class="service-features">
+                        <li>Diversified Investment Portfolios</li>
+                        <li>Risk Assessment & Management</li>
+                        <li>Performance Monitoring & Rebalancing</li>
+                        <li>Tax-Efficient Structuring</li>
+                        <li>Cross-Border Investment Solutions</li>
+                    </ul>
+                    <a href="#appointment" class="btn btn-secondary">Learn More</a>
+                </div>
+
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">🏦</div>
+                    <h3>Retirement & Estate Planning</h3>
+                    <p>Strategic planning for financial independence and legacy preservation. Ensuring your wealth transitions seamlessly across generations.</p>
+                    <ul class="service-features">
+                        <li>Retirement Income Strategies</li>
+                        <li>Pension Optimization</li>
+                        <li>Estate Structure Planning</li>
+                        <li>Tax-Advantaged Retirement Accounts</li>
+                        <li>Inheritance & Succession Planning</li>
+                    </ul>
+                    <a href="#appointment" class="btn btn-secondary">Learn More</a>
+                </div>
+
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">🌍</div>
+                    <h3>International Finance</h3>
+                    <p>Cross-border financial solutions for international clients, expatriates, and global investment opportunities.</p>
+                    <ul class="service-features">
+                        <li>Multi-Currency Portfolio Management</li>
+                        <li>International Tax Planning</li>
+                        <li>Offshore Investment Structures</li>
+                        <li>Currency Risk Hedging</li>
+                        <li>Global Market Access</li>
+                    </ul>
+                    <a href="#appointment" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Asset Recovery Services -->
+    <section class="section section-alt" id="recovery">
+        <div class="container">
+            <h2 class="section-title">Investigation & Asset Recovery</h2>
+            <div class="services-grid">
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">🔍</div>
+                    <h3>Financial Fraud Investigation</h3>
+                    <p>Professional investigation services for suspected financial fraud, investment scams, and misappropriation of funds.</p>
+                    <ul class="service-features">
+                        <li>Fraud Detection & Analysis</li>
+                        <li>Digital Forensics</li>
+                        <li>Transaction Tracing</li>
+                        <li>Evidence Collection</li>
+                        <li>Expert Witness Services</li>
+                    </ul>
+                    <a href="#appointment" class="btn btn-secondary">Get Assessment</a>
+                </div>
+
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">💰</div>
+                    <h3>Asset Recovery & Tracing</h3>
+                    <p>Specialized recovery of lost, stolen, or misappropriated assets through legal channels and international cooperation.</p>
+                    <ul class="service-features">
+                        <li>Asset Tracing & Location</li>
+                        <li>Recovery Strategy Development</li>
+                        <li>International Asset Recovery</li>
+                        <li>Legal Proceedings Support</li>
+                        <li>Settlement Negotiations</li>
+                    </ul>
+                    <a href="#appointment" class="btn btn-secondary">Get Assessment</a>
+                </div>
+
+                <div class="service-card animate-on-scroll">
+                    <div class="service-icon">⚖️</div>
+                    <h3>Due Diligence & Compliance</h3>
+                    <p>Comprehensive due diligence services for investments, business partnerships, and compliance assessments.</p>
+                    <ul class="service-features">
+                        <li>Investment Due Diligence</li>
+                        <li>Background Verification</li>
+                        <li>Regulatory Compliance Review</li>
+                        <li>Risk Assessment</li>
+                        <li>AML/KYC Procedures</li>
+                    </ul>
+                    <a href="#appointment" class="btn btn-secondary">Get Assessment</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section class="section" id="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience Timeline</h2>
+            <div class="timeline">
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2019 - Present</div>
+                        <h3>Senior Financial Advisor</h3>
+                        <h4>H&W Invest</h4>
+                        <p>Independent financial advisory focused on client-first solutions. Specializing in wealth management, asset recovery, and international finance. Building long-term relationships based on trust, transparency, and results.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2015 - 2019</div>
+                        <h3>Portfolio Manager</h3>
+                        <h4>Allianz Global Investors</h4>
+                        <p>Managed diverse investment portfolios with focus on alternative investments and retirement planning. Developed expertise in portfolio strategy and risk management for high-net-worth individuals.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2012 - 2015</div>
+                        <h3>Wealth Management Advisor</h3>
+                        <h4>UBS Wealth Management</h4>
+                        <p>Provided comprehensive wealth management services to affluent clients. Gained deep experience in estate planning, international investments, and cross-border financial structuring.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2009 - 2012</div>
+                        <h3>Corporate Finance Analyst</h3>
+                        <h4>ING Group, Netherlands</h4>
+                        <p>Specialized in corporate finance, M&A analysis, and international investment strategies. Developed expertise in European financial markets and regulatory frameworks.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+
+                <div class="timeline-item animate-on-scroll">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2005 - 2009</div>
+                        <h3>Investment Banking Analyst</h3>
+                        <h4>Credit Suisse, Switzerland</h4>
+                        <p>Started career in investment banking, building foundation in financial analysis, market research, and client relationship management. Learned traditional banking practices and client service excellence.</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insights/Blog -->
+    <section class="section section-alt" id="insights">
+        <div class="container">
+            <h2 class="section-title">Latest Insights</h2>
+            <div class="blog-grid">
+                <article class="blog-card animate-on-scroll">
+                    <div class="blog-content">
+                        <div class="blog-meta">Investment Strategy • December 2024</div>
+                        <h3>Portfolio Diversification in Volatile Markets</h3>
+                        <p>Understanding how to maintain balanced portfolios during market uncertainty. Key strategies for protecting wealth while capturing growth opportunities in 2025.</p>
+                        <a href="#" class="btn btn-outline">Read More</a>
+                    </div>
+                </article>
+
+                <article class="blog-card animate-on-scroll">
+                    <div class="blog-content">
+                        <div class="blog-meta">Asset Recovery • November 2024</div>
+                        <h3>International Asset Recovery: Recent Case Studies</h3>
+                        <p>Examining successful asset recovery cases across European jurisdictions. Lessons learned and best practices for victims of financial fraud.</p>
+                        <a href="#" class="btn btn-outline">Read More</a>
+                    </div>
+                </article>
+
+                <article class="blog-card animate-on-scroll">
+                    <div class="blog-content">
+                        <div class="blog-meta">Financial Planning • October 2024</div>
+                        <h3>Tax-Efficient Retirement Planning for Europeans</h3>
+                        <p>Navigating complex international tax regulations for retirement planning. Strategies for expatriates and cross-border workers to optimize their retirement savings.</p>
+                        <a href="#" class="btn btn-outline">Read More</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">Client Testimonials</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card animate-on-scroll">
+                    <p class="testimonial-quote">Thomas helped us recover assets worth over €500,000 after we fell victim to an investment scam. His expertise and dedication were exceptional. We can't thank him enough for bringing our financial security back.</p>
+                    <div class="testimonial-author">— Maria & Klaus S., Munich</div>
+                </div>
+
+                <div class="testimonial-card animate-on-scroll">
+                    <p class="testimonial-quote">After 15 years with traditional banks, working with Thomas has been refreshing. His independent approach and genuine care for our family's financial future sets him apart. Truly a professional we trust.</p>
+                    <div class="testimonial-author">— Catherine L., Geneva</div>
+                </div>
+
+                <div class="testimonial-card animate-on-scroll">
+                    <p class="testimonial-quote">Thomas's expertise in international finance helped us navigate complex cross-border investments. His family values and ethical approach make him the advisor we've been looking for all these years.</p>
+                    <div class="testimonial-author">— James & Patricia M., London</div>
+                </div>
+
+                <div class="testimonial-card animate-on-scroll">
+                    <p class="testimonial-quote">The investigation services Thomas provided were thorough and professional. He helped us uncover financial irregularities and recover significant funds. His expertise saved our business.</p>
+                    <div class="testimonial-author">— Roberto F., Milan</div>
+                </div>
+
+                <div class="testimonial-card animate-on-scroll">
+                    <p class="testimonial-quote">Thomas transformed our retirement planning strategy. His deep understanding of international regulations and tax optimization has secured our financial future. We recommend him without hesitation.</p>
+                    <div class="testimonial-author">— Anne & David R., Amsterdam</div>
+                </div>
+
+                <div class="testimonial-card animate-on-scroll">
+                    <p class="testimonial-quote">Working with Thomas on our estate planning has been incredibly valuable. His attention to detail and long-term thinking ensures our family's wealth will be protected for generations.</p>
+                    <div class="testimonial-author">— Elisabeth H., Zurich</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Appointment -->
+    <section class="section section-alt" id="appointment">
+        <div class="container">
+            <h2 class="section-title">Book Your Appointment</h2>
+            
+            <div class="appointment-grid">
+                <div class="appointment-option animate-on-scroll">
+                    <div class="service-icon">💼</div>
+                    <h3>Financial Advisory Consultation</h3>
+                    <p>Comprehensive review of your financial situation and goals. Discuss investment strategies, retirement planning, and wealth management solutions.</p>
+                    <p><strong>Duration:</strong> 60 minutes<br>
+                    <strong>Format:</strong> In-person or Video Call<br>
+                    <strong>Investment:</strong> Complimentary Initial Consultation</p>
+                </div>
+
+                <div class="appointment-option animate-on-scroll">
+                    <div class="service-icon">🔍</div>
+                    <h3>Asset Recovery Assessment</h3>
+                    <p>Confidential evaluation of your asset recovery case. Professional assessment of recovery prospects and recommended action plan.</p>
+                    <p><strong>Duration:</strong> 45 minutes<br>
+                    <strong>Format:</strong> Secure Video Call or In-person<br>
+                    <strong>Investment:</strong> Free Case Assessment</p>
+                </div>
+            </div>
+
+            <div class="appointment-form animate-on-scroll">
+                <h3 style="text-align: center; margin-bottom: 2rem;">Schedule Your Consultation</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="appointmentName">Full Name *</label>
+                        <input type="text" id="appointmentName" name="name" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="appointmentEmail">Email Address *</label>
+                        <input type="email" id="appointmentEmail" name="email" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="appointmentPhone">Phone Number</label>
+                        <input type="tel" id="appointmentPhone" name="phone" class="form-input">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="appointmentService">Service Interest *</label>
+                        <select id="appointmentService" name="service" class="form-input" required>
+                            <option value="">Select Service</option>
+                            <option value="financial-advisory">Financial Advisory Consultation</option>
+                            <option value="asset-recovery">Asset Recovery Assessment</option>
+                            <option value="investigation">Investigation Services</option>
+                            <option value="general">General Inquiry</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="appointmentPreference">Preferred Meeting Format</label>
+                        <select id="appointmentPreference" name="preference" class="form-input">
+                            <option value="">Select Preference</option>
+                            <option value="video">Video Call</option>
+                            <option value="phone">Phone Call</option>
+                            <option value="in-person">In-Person Meeting</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="appointmentMessage">Brief Description of Your Needs</label>
+                        <textarea id="appointmentMessage" name="message" class="form-input form-textarea" rows="4" placeholder="Please provide a brief overview of your situation or questions..."></textarea>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="appointmentConsent" name="consent" required>
+                        <label for="appointmentConsent">I consent to Thomas Webber contacting me regarding my appointment request and understand that my information will be handled confidentially in accordance with Swiss privacy regulations.</label>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Book Appointment</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section section-dark" id="contact">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Get In Touch</h2>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item animate-on-scroll">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>Office Location</h4>
+                            <p>H&W Invest<br>Zurich, Switzerland<br>By Appointment Only</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item animate-on-scroll">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>thomas.webber@hwinvest.ch<br>secure@thomaswebber.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item animate-on-scroll">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+41 44 XXX XXXX (Primary)<br>+44 20 XXXX XXXX (UK)</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item animate-on-scroll">
+                        <div class="contact-icon">🛡️</div>
+                        <div>
+                            <h4>Secure Communication</h4>
+                            <p>Encrypted email available<br>Signal: Available upon request<br>ProtonMail: thomas@protonmail.ch</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="appointment-form animate-on-scroll">
+                    <h3 style="text-align: center; margin-bottom: 2rem; color: white;">Send Message</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="contactName" style="color: white;">Full Name *</label>
+                            <input type="text" id="contactName" name="name" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactEmail" style="color: white;">Email Address *</label>
+                            <input type="email" id="contactEmail" name="email" class="form-input" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactSubject" style="color: white;">Subject</label>
+                            <input type="text" id="contactSubject" name="subject" class="form-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactMessage" style="color: white;">Message *</label>
+                            <textarea id="contactMessage" name="message" class="form-input form-textarea" rows="5" required placeholder="Please describe how I can help you..."></textarea>
+                        </div>
+
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="contactPrivacy" name="privacy" required>
+                            <label for="contactPrivacy" style="color: rgba(255,255,255,0.9);">I agree to the processing of my personal data for the purpose of responding to my inquiry, in accordance with applicable privacy regulations.</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Thomas Webber</h4>
+                    <p>FINMA & FCA Licensed Financial Advisor and Asset Recovery Professional. Independent advisory services focused on client success and family values.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <p><a href="#financial">Financial Advisory</a></p>
+                    <p><a href="#recovery">Asset Recovery</a></p>
+                    <p><a href="#experience">Investigation Services</a></p>
+                    <p><a href="#appointment">Consultations</a></p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Professional</h4>
+                    <p>FINMA Licensed</p>
+                    <p>FCA Regulated</p>
+                    <p>H&W Invest Senior Advisor</p>
+                    <p>19+ Years Experience</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <p><a href="#">Privacy Policy</a></p>
+                    <p><a href="#">Terms of Service</a></p>
+                    <p><a href="#">Regulatory Information</a></p>
+                    <p><a href="#">GDPR Compliance</a></p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Thomas Webber Financial Advisory. All rights reserved. Licensed by FINMA (Switzerland) and regulated by FCA (United Kingdom). Professional services provided through H&W Invest.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        // Biography Toggle
+        function toggleBiography() {
+            const biographyFull = document.getElementById('biographyFull');
+            const toggleText = document.getElementById('toggleText');
+            
+            if (biographyFull.classList.contains('active')) {
+                biographyFull.classList.remove('active');
+                toggleText.textContent = 'Read More';
+            } else {
+                biographyFull.classList.add('active');
+                toggleText.textContent = 'Read Less';
+            }
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    // Close mobile menu if open
+                    const navLinks = document.getElementById('navLinks');
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
+
+        // Form submission handlers
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Basic form validation
+                const requiredFields = form.querySelectorAll('[required]');
+                let isValid = true;
+                
+                requiredFields.forEach(field => {
+                    if (!field.value.trim()) {
+                        isValid = false;
+                        field.style.borderColor = 'var(--secondary)';
+                    } else {
+                        field.style.borderColor = 'var(--light)';
+                    }
+                });
+
+                if (isValid) {
+                    // Here you would typically send the form data to a server
+                    alert('Thank you for your message. Thomas will contact you within 24 hours.');
+                    form.reset();
+                } else {
+                    alert('Please fill in all required fields.');
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Header background on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 5px 30px rgba(69, 69, 69, 0.1)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = 'none';
+            }
+        });
+
+        // Enhanced form interactions
+        document.querySelectorAll('.form-input').forEach(input => {
+            input.addEventListener('focus', function() {
+                this.style.transform = 'translateY(-2px)';
+                this.style.boxShadow = '0 10px 30px rgba(255, 96, 0, 0.2)';
+            });
+            
+            input.addEventListener('blur', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = 'none';
+            });
+        });
+
+        // Add subtle parallax effect to hero circle
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroCircle = document.querySelector('.hero-circle');
+            if (heroCircle) {
+                const speed = scrolled * 0.1;
+                heroCircle.style.transform = `translateY(${speed}px)`;
+            }
+        });
+    </script>
+</body>
+</html>
