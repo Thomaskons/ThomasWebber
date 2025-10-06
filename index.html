@@ -100,8 +100,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(rgba(11, 59, 90, 0.85), rgba(19, 111, 99, 0.75)),
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%230b3b5a;stop-opacity:1" /><stop offset="100%" style="stop-color:%23136f63;stop-opacity:1" /></linearGradient></defs><rect fill="url(%23grad)" width="1200" height="600"/><circle cx="200" cy="150" r="100" fill="rgba(255,255,255,0.05)"/><circle cx="800" cy="400" r="150" fill="rgba(255,255,255,0.03)"/><circle cx="1000" cy="200" r="80" fill="rgba(255,255,255,0.04)"/><path d="M0,300 Q300,200 600,300 T1200,300" stroke="rgba(255,255,255,0.1)" stroke-width="2" fill="none"/><path d="M0,400 Q300,350 600,400 T1200,400" stroke="rgba(255,255,255,0.08)" stroke-width="2" fill="none"/></svg>');
+            background: linear-gradient(rgba(11, 59, 90, 0.75), rgba(19, 111, 99, 0.65)),
+                        url('https://imgpx.com/en/mmeOYPTBeyHC.webp');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -478,7 +478,6 @@
             </div>
         </div>
     </nav>
-
     <main id="main-content">
         <section id="home" class="hero">
             <div class="container">
@@ -490,7 +489,6 @@
                 </div>
             </div>
         </section>
-
         <section id="about" class="about-section">
             <div class="container">
                 <h2 class="section-title">About Antony Goodman</h2>
@@ -515,7 +513,6 @@
                 </div>
             </div>
         </section>
-
         <section id="guidance" class="guidance-section">
             <div class="container">
                 <h2 class="section-title">Recovery Guidance</h2>
@@ -565,7 +562,6 @@
                         <p><strong>Your Role:</strong> Cooperation and timely evidence submission are crucial</p>
                     </div>
                 </div>
-
                 <div class="faq-section mt-5">
                     <h3 class="text-center mb-4" style="color: var(--navy);">Frequently Asked Questions</h3>
                     <div class="accordion" id="faqAccordion">
@@ -650,7 +646,6 @@
                 </div>
             </div>
         </section>
-
         <section id="accomplishments" class="accomplishments-section">
             <div class="container">
                 <h2 class="section-title">Key Accomplishments</h2>
@@ -689,7 +684,6 @@
                 </div>
             </div>
         </section>
-
         <section id="resources" class="resources-section">
             <div class="container">
                 <h2 class="section-title">Helpful Resources</h2>
@@ -752,7 +746,6 @@
                 </div>
             </div>
         </section>
-
         <section id="contact" class="contact-section">
             <div class="container">
                 <h2 class="section-title">Get in Touch</h2>
@@ -833,7 +826,6 @@
                 </div>
             </div>
         </section>
-
         <section id="cv-download" class="text-center py-5" style="background: var(--navy); color: white;">
             <div class="container">
                 <h2 class="mb-3">Download Full CV</h2>
@@ -845,7 +837,6 @@
             </div>
         </section>
     </main>
-
     <footer>
         <div class="container">
             <div class="footer-disclaimer">
@@ -866,7 +857,6 @@
             </div>
         </div>
     </footer>
-
     <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -892,7 +882,6 @@
             </div>
         </div>
     </div>
-
     <div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -919,7 +908,6 @@
             </div>
         </div>
     </div>
-
     <div class="modal fade" id="accessibilityModal" tabindex="-1" aria-labelledby="accessibilityModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
@@ -952,7 +940,6 @@
             </div>
         </div>
     </div>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     
     <script type="application/ld+json">
@@ -980,13 +967,11 @@
                 navbar.classList.remove('scrolled');
             }
         });
-
         const contactPreference = document.getElementById('contactPreference');
         const emailField = document.getElementById('emailField');
         const phoneField = document.getElementById('phoneField');
         const emailInput = document.getElementById('email');
         const phoneInput = document.getElementById('phone');
-
         contactPreference.addEventListener('change', function() {
             if (this.value === 'email') {
                 emailField.style.display = 'block';
@@ -1005,10 +990,8 @@
                 phoneInput.required = false;
             }
         });
-
         const contactForm = document.getElementById('contactForm');
         const fileUpload = document.getElementById('fileUpload');
-
         fileUpload.addEventListener('change', function() {
             const file = this.files[0];
             if (file) {
@@ -1027,16 +1010,13 @@
                 }
             }
         });
-
         contactForm.addEventListener('submit', function(event) {
             event.preventDefault();
             event.stopPropagation();
-
             if (!contactForm.checkValidity()) {
                 contactForm.classList.add('was-validated');
                 return;
             }
-
             const formData = new FormData(contactForm);
             
             console.log('Form submission (client-side only):');
@@ -1045,7 +1025,6 @@
                     console.log(key + ': ' + value);
                 }
             }
-
             document.getElementById('successAlert').classList.remove('d-none');
             contactForm.reset();
             contactForm.classList.remove('was-validated');
@@ -1054,7 +1033,6 @@
                 document.getElementById('successAlert').classList.add('d-none');
             }, 5000);
         });
-
         const aboutNavLink = document.querySelector('a[href="#about"]');
         aboutNavLink.addEventListener('click', function(e) {
             const aboutSection = document.getElementById('about');
@@ -1062,7 +1040,6 @@
                 aboutSection.scrollIntoView({ behavior: 'smooth' });
             }
         });
-
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 const href = this.getAttribute('href');
@@ -1080,7 +1057,6 @@
                 }
             });
         });
-
         if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
             document.querySelectorAll('[style*="background-attachment"]').forEach(el => {
                 el.style.backgroundAttachment = 'scroll';
