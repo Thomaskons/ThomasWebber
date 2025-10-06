@@ -3,1570 +3,1089 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thomas Webber | FINMA & FCA Licensed Financial Advisor & Asset Recovery Professional</title>
-    <meta name="description" content="Thomas Webber - FINMA & FCA Licensed Financial Advisor and Investigator & Asset Recovery Professional. Independent advisory services with H&W Invest since 2019.">
-    <meta property="og:title" content="Thomas Webber | Financial Advisor & Asset Recovery Professional">
-    <meta property="og:description" content="FINMA & FCA Licensed Financial Advisor and Asset Recovery Professional. Family-focused, client-first approach since 2019.">
+    <meta name="description" content="Antony Goodman, Senior Case Officer in HMRC's Asset Recovery Division - Cybercrime Investigation Unit. Expert guidance on asset recovery for cybercrime victims.">
+    <meta name="keywords" content="HMRC, asset recovery, cybercrime, investigation, fraud, money laundering">
+    <meta name="author" content="Antony Goodman">
+    
+    <meta property="og:title" content="Antony Goodman - HMRC Asset Recovery | Cybercrime Guidance">
+    <meta property="og:description" content="Expert guidance on cybercrime asset recovery from HMRC Senior Case Officer">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://imgpx.com/en/WndSI3ItuM1A.jpg">
+    
+    <title>Antony Goodman - HMRC Asset Recovery | Cybercrime Guidance</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
     <style>
+        :root {
+            --navy: #0b3b5a;
+            --slate: #4a5568;
+            --teal: #136f63;
+            --off-white: #f8fafc;
+            --light-gray: #e2e8f0;
+            --dark-gray: #2d3748;
+        }
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
-        :root {
-            --primary: #454545;
-            --secondary: #FF6000;
-            --accent: #FFA559;
-            --light: #FFE6C7;
-            --white: #ffffff;
-            --black: #000000;
-            --shadow: rgba(69, 69, 69, 0.1);
-            --shadow-heavy: rgba(69, 69, 69, 0.2);
-            --gradient-primary: linear-gradient(135deg, #FF6000 0%, #FFA559 100%);
-            --gradient-light: linear-gradient(135deg, #FFE6C7 0%, #ffffff 100%);
-            --gradient-dark: linear-gradient(135deg, #454545 0%, #FF6000 100%);
-        }
-
-        * {
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.7;
-            color: var(--primary);
-            background: var(--white);
+        
+        html {
             scroll-behavior: smooth;
         }
-
-        /* Typography */
-        h1, h2, h3, h4, h5, h6 {
-            font-weight: 600;
-            line-height: 1.3;
-            margin-bottom: 1rem;
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: var(--dark-gray);
+            background-color: var(--off-white);
         }
-
-        h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); }
-        h2 { font-size: clamp(2rem, 4vw, 3.5rem); }
-        h3 { font-size: clamp(1.5rem, 3vw, 2.5rem); }
-        h4 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
-
-        p {
-            margin-bottom: 1.5rem;
-            color: var(--primary);
-            opacity: 0.85;
-        }
-
-        /* Container */
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        /* Header */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--light);
-            transition: all 0.3s ease;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 0;
-        }
-
-        .logo {
-            font-size: 1.75rem;
-            font-weight: 700;
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2.5rem;
-            align-items: center;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--primary);
-            font-weight: 500;
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .nav-links a:hover {
-            color: var(--secondary);
-            transform: translateY(-1px);
-        }
-
-        .nav-links a:before {
-            content: '';
+        
+        .skip-link {
             position: absolute;
-            bottom: -5px;
+            top: -40px;
             left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--gradient-primary);
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover:before {
-            width: 100%;
-        }
-
-        .mobile-menu {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-            gap: 4px;
-        }
-
-        .mobile-menu span {
-            width: 28px;
-            height: 3px;
-            background: var(--secondary);
-            border-radius: 3px;
-            transition: all 0.3s ease;
-        }
-
-        /* Buttons */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem 2.5rem;
+            background: var(--teal);
+            color: white;
+            padding: 8px 16px;
             text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: all 0.4s ease;
-            border: none;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-            margin: 0.5rem;
-            text-align: center;
+            z-index: 9999;
         }
-
-        .btn:before {
-            content: '';
-            position: absolute;
+        
+        .skip-link:focus {
             top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-            transition: left 0.7s ease;
         }
-
-        .btn:hover:before {
-            left: 100%;
-        }
-
-        .btn-primary {
-            background: var(--gradient-primary);
-            color: var(--white);
-            box-shadow: 0 10px 30px rgba(255, 96, 0, 0.3);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(255, 96, 0, 0.4);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--secondary);
-            border: 2px solid var(--secondary);
-        }
-
-        .btn-secondary:hover {
-            background: var(--secondary);
-            color: var(--white);
-            transform: translateY(-3px);
-        }
-
-        .btn-outline {
-            background: rgba(255, 255, 255, 0.1);
-            color: var(--primary);
-            border: 2px solid var(--primary);
+        
+        .navbar {
+            background: rgba(11, 59, 90, 0.95);
             backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-
-        .btn-outline:hover {
-            background: var(--primary);
-            color: var(--white);
-            transform: translateY(-2px);
+        
+        .navbar.scrolled {
+            background: rgba(11, 59, 90, 0.98);
         }
-
-        /* Hero Section */
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: white !important;
+        }
+        
+        .navbar-subtitle {
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.8);
+            display: block;
+            font-weight: 400;
+        }
+        
+        .nav-link {
+            color: rgba(255,255,255,0.9) !important;
+            font-weight: 500;
+            margin: 0 0.5rem;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link:hover,
+        .nav-link:focus {
+            color: var(--teal) !important;
+        }
+        
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
-            background: var(--gradient-light);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 30%, rgba(255, 96, 0, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 80% 70%, rgba(255, 165, 89, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 60% 20%, rgba(255, 230, 199, 0.3) 0%, transparent 40%);
-        }
-
-        .hero-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5rem;
-            align-items: center;
-            position: relative;
-            z-index: 1;
-        }
-
-        .hero-text h1 {
-            background: var(--gradient-dark);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero-taglines {
-            margin-bottom: 2rem;
-        }
-
-        .tagline {
-            display: block;
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 0.75rem;
-            padding: 0.5rem 0;
-        }
-
-        .tagline-primary {
-            color: var(--secondary);
-            background: linear-gradient(90deg, var(--secondary), var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .tagline-secondary {
-            color: var(--accent);
-            background: linear-gradient(90deg, var(--accent), var(--secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero-bio {
-            background: rgba(255, 255, 255, 0.7);
-            padding: 2rem;
-            border-radius: 20px;
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 96, 0, 0.2);
-            margin: 2rem 0;
-            box-shadow: 0 10px 40px var(--shadow);
-        }
-
-        .hero-visual {
-            display: flex;
             justify-content: center;
-            align-items: center;
+            background: linear-gradient(rgba(11, 59, 90, 0.85), rgba(19, 111, 99, 0.75)),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><defs><linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:%230b3b5a;stop-opacity:1" /><stop offset="100%" style="stop-color:%23136f63;stop-opacity:1" /></linearGradient></defs><rect fill="url(%23grad)" width="1200" height="600"/><circle cx="200" cy="150" r="100" fill="rgba(255,255,255,0.05)"/><circle cx="800" cy="400" r="150" fill="rgba(255,255,255,0.03)"/><circle cx="1000" cy="200" r="80" fill="rgba(255,255,255,0.04)"/><path d="M0,300 Q300,200 600,300 T1200,300" stroke="rgba(255,255,255,0.1)" stroke-width="2" fill="none"/><path d="M0,400 Q300,350 600,400 T1200,400" stroke="rgba(255,255,255,0.08)" stroke-width="2" fill="none"/></svg>');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
             position: relative;
         }
-
-        .hero-circle {
-            width: 350px;
-            height: 350px;
-            border-radius: 50%;
-            background: var(--gradient-primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 6rem;
+        
+        @media (prefers-reduced-motion: reduce) {
+            .hero {
+                background-attachment: scroll;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                background-attachment: scroll;
+            }
+        }
+        
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
             font-weight: 700;
-            color: var(--white);
-            box-shadow: 
-                0 0 60px rgba(255, 96, 0, 0.4),
-                0 20px 40px rgba(255, 96, 0, 0.3);
-            animation: float 8s ease-in-out infinite;
-            position: relative;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
-
-        .hero-circle:before {
-            content: '';
-            position: absolute;
-            top: -10px;
-            left: -10px;
-            right: -10px;
-            bottom: -10px;
-            background: linear-gradient(45deg, var(--secondary), var(--accent), var(--secondary));
-            border-radius: 50%;
-            z-index: -1;
-            animation: rotate 20s linear infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px) scale(1); }
-            50% { transform: translateY(-15px) scale(1.05); }
-        }
-
-        @keyframes rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        /* Sections */
-        .section {
-            padding: 6rem 0;
-            position: relative;
-        }
-
-        .section-alt {
-            background: var(--gradient-light);
-        }
-
-        .section-dark {
-            background: var(--primary);
-            color: var(--white);
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 4rem;
-            position: relative;
-        }
-
-        .section-title:after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: var(--gradient-primary);
-            border-radius: 4px;
-        }
-
-        /* About Section */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 4rem;
-            align-items: start;
-        }
-
-        .about-card {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 3rem;
-            border-radius: 25px;
-            box-shadow: 0 15px 50px var(--shadow);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 96, 0, 0.1);
-            transition: all 0.4s ease;
-        }
-
-        .about-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 70px var(--shadow-heavy);
-        }
-
-        .biography-short, .biography-full {
-            line-height: 1.8;
-        }
-
-        .biography-full {
-            display: none;
-            margin-top: 2rem;
-            padding-top: 2rem;
-            border-top: 2px solid var(--light);
-            animation: fadeIn 0.5s ease-in;
-        }
-
-        .biography-full.active {
-            display: block;
-        }
-
-        .personal-section {
-            background: var(--gradient-primary);
-            color: var(--white);
-            padding: 2rem;
-            border-radius: 20px;
-            margin-top: 2rem;
-            text-align: center;
-        }
-
-        .family-info {
-            font-size: 1.1rem;
-            font-weight: 500;
-            opacity: 0.95;
-        }
-
-        /* Services Grid */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
-        }
-
-        .service-card {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 3rem;
-            border-radius: 25px;
-            text-align: center;
-            transition: all 0.4s ease;
-            border: 2px solid transparent;
-            position: relative;
-            overflow: hidden;
-            backdrop-filter: blur(20px);
-        }
-
-        .service-card:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 5px;
-            background: var(--gradient-primary);
-            transform: scaleX(0);
-            transition: transform 0.4s ease;
-        }
-
-        .service-card:hover:before {
-            transform: scaleX(1);
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 70px var(--shadow-heavy);
-            border-color: var(--light);
-        }
-
-        .service-icon {
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            background: var(--gradient-primary);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 2rem;
-            font-size: 2.5rem;
-            color: var(--white);
-            box-shadow: 0 15px 40px rgba(255, 96, 0, 0.3);
-        }
-
-        .service-features {
-            list-style: none;
-            text-align: left;
-            margin: 2rem 0;
-        }
-
-        .service-features li {
-            padding: 0.5rem 0;
-            position: relative;
-            padding-left: 2rem;
-        }
-
-        .service-features li:before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: var(--secondary);
-            font-weight: bold;
-        }
-
-        /* Timeline */
-        .timeline {
-            position: relative;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .timeline:before {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 4px;
-            height: 100%;
-            background: var(--gradient-primary);
-            border-radius: 4px;
-        }
-
-        .timeline-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 4rem;
-            position: relative;
-        }
-
-        .timeline-item:nth-child(odd) .timeline-content {
-            margin-right: auto;
-            margin-left: 0;
-            text-align: right;
-        }
-
-        .timeline-item:nth-child(even) .timeline-content {
+        
+        .hero p {
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            margin-bottom: 2.5rem;
+            max-width: 800px;
             margin-left: auto;
-            margin-right: 0;
-            text-align: left;
+            margin-right: auto;
         }
-
-        .timeline-content {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 2.5rem;
-            border-radius: 20px;
-            width: 45%;
-            position: relative;
-            box-shadow: 0 15px 50px var(--shadow);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 96, 0, 0.1);
-            transition: all 0.4s ease;
-        }
-
-        .timeline-content:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 70px var(--shadow-heavy);
-        }
-
-        .timeline-dot {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 25px;
-            height: 25px;
-            background: var(--secondary);
-            border-radius: 50%;
-            border: 5px solid var(--white);
-            box-shadow: 0 4px 20px rgba(255, 96, 0, 0.4);
-            z-index: 2;
-        }
-
-        .timeline-year {
-            background: var(--gradient-primary);
-            color: var(--white);
-            padding: 0.75rem 1.5rem;
-            border-radius: 25px;
-            font-size: 1rem;
+        
+        .btn-custom {
+            padding: 0.875rem 2rem;
             font-weight: 600;
-            display: inline-block;
-            margin-bottom: 1rem;
-        }
-
-        /* Blog Grid */
-        .blog-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
-        }
-
-        .blog-card {
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 15px 50px var(--shadow);
-            transition: all 0.4s ease;
-            border: 1px solid rgba(255, 96, 0, 0.1);
-        }
-
-        .blog-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 70px var(--shadow-heavy);
-        }
-
-        .blog-content {
-            padding: 2rem;
-        }
-
-        .blog-meta {
-            color: var(--secondary);
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        /* Testimonials */
-        .testimonials-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
-        }
-
-        .testimonial-card {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 3rem;
-            border-radius: 20px;
-            box-shadow: 0 15px 50px var(--shadow);
-            transition: all 0.4s ease;
-            text-align: center;
-            position: relative;
-            backdrop-filter: blur(20px);
-        }
-
-        .testimonial-card:before {
-            content: '"';
-            position: absolute;
-            top: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 4rem;
-            color: var(--secondary);
-            font-weight: bold;
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 25px 70px var(--shadow-heavy);
-        }
-
-        .testimonial-quote {
-            font-style: italic;
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            line-height: 1.7;
-        }
-
-        .testimonial-author {
-            font-weight: 600;
-            color: var(--secondary);
-        }
-
-        /* Appointment Section */
-        .appointment-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
-            margin-bottom: 4rem;
-        }
-
-        .appointment-option {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 3rem;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 15px 50px var(--shadow);
-            transition: all 0.4s ease;
-            border: 2px solid transparent;
-            backdrop-filter: blur(20px);
-        }
-
-        .appointment-option:hover {
-            transform: translateY(-10px);
-            border-color: var(--secondary);
-            box-shadow: 0 25px 70px var(--shadow-heavy);
-        }
-
-        .appointment-form {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 3rem;
-            border-radius: 25px;
-            max-width: 600px;
-            margin: 0 auto;
-            box-shadow: 0 20px 60px var(--shadow-heavy);
-            backdrop-filter: blur(20px);
-        }
-
-        /* Contact Form */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            padding: 1.5rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 15px;
-            backdrop-filter: blur(20px);
-        }
-
-        .contact-icon {
-            width: 60px;
-            height: 60px;
-            background: var(--gradient-primary);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 1.5rem;
-            font-size: 1.5rem;
-            color: var(--white);
-        }
-
-        .form-group {
-            margin-bottom: 2rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.75rem;
-            font-weight: 600;
-            color: var(--primary);
-        }
-
-        .form-input {
-            width: 100%;
-            padding: 1rem 1.5rem;
-            border: 2px solid var(--light);
-            border-radius: 15px;
-            background: rgba(255, 255, 255, 0.9);
-            color: var(--primary);
-            font-size: 1rem;
+            border-radius: 50px;
             transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin: 0.5rem;
+            border: 2px solid transparent;
         }
-
-        .form-input:focus {
-            outline: none;
-            border-color: var(--secondary);
-            background: var(--white);
+        
+        .btn-primary-custom {
+            background: var(--teal);
+            color: white;
+            border-color: var(--teal);
+        }
+        
+        .btn-primary-custom:hover,
+        .btn-primary-custom:focus {
+            background: #0f5a51;
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px var(--shadow);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
-
-        .form-textarea {
-            min-height: 120px;
-            resize: vertical;
+        
+        .btn-secondary-custom {
+            background: transparent;
+            color: white;
+            border-color: white;
         }
-
-        .checkbox-group {
+        
+        .btn-secondary-custom:hover,
+        .btn-secondary-custom:focus {
+            background: white;
+            color: var(--navy);
+            transform: translateY(-2px);
+        }
+        
+        section {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        
+        .section-subtitle {
+            color: var(--slate);
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+        
+        .about-section {
+            background: white;
+        }
+        
+        .about-content {
             display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            margin-bottom: 2rem;
+            align-items: center;
+            gap: 3rem;
+            flex-wrap: wrap;
         }
-
-        .checkbox-group input[type="checkbox"] {
-            width: 20px;
-            height: 20px;
-            margin-top: 2px;
-            accent-color: var(--secondary);
+        
+        .about-image {
+            flex: 0 0 300px;
+            text-align: center;
         }
-
-        .checkbox-group label {
-            font-size: 0.9rem;
-            line-height: 1.6;
-            color: var(--primary);
-            opacity: 0.9;
+        
+        .about-image img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
         }
-
-        /* Footer */
-        footer {
-            background: var(--black);
-            color: var(--white);
-            padding: 3rem 0;
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
         }
-
-        .footer-content {
+        
+        .about-text h3 {
+            color: var(--navy);
+            margin-bottom: 1rem;
+            font-size: 1.75rem;
+        }
+        
+        .guidance-section {
+            background: var(--off-white);
+        }
+        
+        .guidance-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .step-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .step-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+        }
+        
+        .step-card .step-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: var(--teal);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .step-card h4 {
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+        
+        .accordion-button:not(.collapsed) {
+            background-color: var(--navy);
+            color: white;
+        }
+        
+        .accordion-button:focus {
+            box-shadow: 0 0 0 0.25rem rgba(19, 111, 99, 0.25);
+        }
+        
+        .accomplishments-section {
+            background: white;
+        }
+        
+        .accomplishment-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
+            gap: 2rem;
+        }
+        
+        .accomplishment-card {
+            background: var(--off-white);
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--teal);
+            transition: all 0.3s ease;
+        }
+        
+        .accomplishment-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .accomplishment-card i {
+            font-size: 2rem;
+            color: var(--teal);
+            margin-bottom: 1rem;
+        }
+        
+        .resources-section {
+            background: var(--off-white);
+        }
+        
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+        
+        .resource-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .resource-card i {
+            font-size: 3rem;
+            color: var(--teal);
+            margin-bottom: 1rem;
+        }
+        
+        .resource-card h4 {
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+        
+        .resource-card a {
+            color: var(--teal);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .resource-card a:hover {
+            text-decoration: underline;
+        }
+        
+        .contact-section {
+            background: white;
+        }
+        
+        .contact-form {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--off-white);
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .form-label {
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-control:focus,
+        .form-select:focus {
+            border-color: var(--teal);
+            box-shadow: 0 0 0 0.25rem rgba(19, 111, 99, 0.25);
+        }
+        
+        .security-note {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+        }
+        
+        footer {
+            background: var(--navy);
+            color: rgba(255,255,255,0.9);
+            padding: 3rem 0 1.5rem;
+        }
+        
+        .footer-disclaimer {
+            background: rgba(0,0,0,0.2);
+            padding: 1.5rem;
+            border-radius: 10px;
             margin-bottom: 2rem;
         }
-
-        .footer-section h4 {
-            color: var(--secondary);
-            margin-bottom: 1.5rem;
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
         }
-
-        .footer-section p, .footer-section a {
-            color: rgba(255, 255, 255, 0.8);
+        
+        .footer-links a {
+            color: rgba(255,255,255,0.9);
             text-decoration: none;
-            line-height: 1.8;
+            transition: color 0.3s ease;
         }
-
-        .footer-section a:hover {
-            color: var(--secondary);
+        
+        .footer-links a:hover {
+            color: var(--teal);
         }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 0.9rem;
+        
+        .modal-header {
+            background: var(--navy);
+            color: white;
         }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        
+        .modal-header .btn-close {
+            filter: invert(1);
         }
-
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.8s ease;
-        }
-
-        .animate-on-scroll.animated {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Responsive Design */
+        
         @media (max-width: 768px) {
-            .container { padding: 0 1rem; }
-            
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: rgba(255, 255, 255, 0.98);
+            .about-content {
                 flex-direction: column;
-                padding: 2rem;
-                gap: 1.5rem;
-                border-top: 1px solid var(--light);
-                backdrop-filter: blur(20px);
             }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .mobile-menu {
-                display: flex;
-            }
-
-            .hero-content {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-                text-align: center;
-            }
-
-            .hero-circle {
-                width: 250px;
-                height: 250px;
-                font-size: 4rem;
-            }
-
-            .about-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .timeline-item {
-                margin-bottom: 2rem;
-            }
-
-            .timeline-content {
-                width: 90%;
-                margin: 0 auto !important;
-                text-align: left !important;
-            }
-
-            .timeline:before {
-                left: 1rem;
-            }
-
-            .timeline-dot {
-                left: 1rem;
-                transform: translateX(0);
-            }
-
-            .appointment-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            h1 { font-size: 2.5rem; }
-            h2 { font-size: 2rem; }
-        }
-
-        @media (max-width: 480px) {
-            .container { padding: 0 1rem; }
-            .section { padding: 4rem 0; }
             
-            .hero-circle {
-                width: 200px;
-                height: 200px;
-                font-size: 3rem;
+            .about-image {
+                flex: 0 0 auto;
             }
-
-            .service-card, .about-card, .testimonial-card {
-                padding: 2rem;
+            
+            section {
+                padding: 3rem 0;
             }
-
-            .appointment-form {
-                padding: 2rem;
+            
+            .contact-form {
+                padding: 2rem 1.5rem;
+            }
+        }
+        
+        @media print {
+            .navbar, .hero, .contact-section, footer {
+                display: none;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header id="header">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" role="navigation">
         <div class="container">
-            <nav>
-                <div class="logo">Thomas Webber</div>
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#financial">Financial Services</a></li>
-                    <li><a href="#recovery">Asset Recovery</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#insights">Insights</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#appointment" class="btn btn-primary">Book Appointment</a></li>
+            <a class="navbar-brand" href="#home">
+                Antony Goodman
+                <span class="navbar-subtitle">HMRC Asset Recovery Division</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about" data-bs-toggle="modal" data-bs-target="#aboutModal">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#guidance">Guidance</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#resources">Resources</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#accomplishments">Accomplishments</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#cv-download"><i class="bi bi-download"></i> CV</a></li>
                 </ul>
-                <div class="mobile-menu" onclick="toggleMobileMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Home Section -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>Thomas Webber</h1>
-                    <div class="hero-taglines">
-                        <span class="tagline tagline-primary">FINMA & FCA Licensed Financial Advisor</span>
-                        <span class="tagline tagline-secondary">Investigator & Asset Recovery Professional</span>
-                    </div>
-                    <div class="hero-bio">
-                        <p><strong>Born into a Swiss banking family in 1982,</strong> Thomas combines generational financial wisdom with modern expertise. After successful careers at Credit Suisse, ING, UBS, and Allianz, he now provides independent advisory services through H&W Invest, where family values shape his client-first approach.</p>
-                    </div>
-                    <div>
-                        <a href="#appointment" class="btn btn-primary">Book Appointment</a>
-                        <a href="#about" class="btn btn-secondary">Learn More</a>
-                    </div>
-                </div>
-                <div class="hero-visual">
-                    <div class="hero-circle">Thomas Webber</div>
-                </div>
             </div>
         </div>
-    </section>
+    </nav>
 
-    <!-- About Section -->
-    <section class="section section-alt" id="about">
-        <div class="container">
-            <h2 class="section-title">About Thomas Webber</h2>
-            <div class="about-grid">
-                <div class="about-card animate-on-scroll">
-                    <h3>Professional Biography</h3>
-                    <div class="biography-short">
-                        <p>Born in 1982 in Schützenbrunnen, Switzerland, Thomas Webber grew up in a family deeply rooted in banking. From his father and grandfather, he inherited both knowledge and values, developing early on a passion for finance, investments, and understanding how financial systems shape people's lives.</p>
-                        <p>After completing his education, Thomas began his career at two of Europe's most respected institutions: Credit Suisse in Switzerland and ING Group in the Netherlands. Over more than seven years, he built strong expertise in wealth management, corporate finance, and international investments.</p>
-                    </div>
-                    <div class="biography-full" id="biographyFull">
-                        <p>Yet, he became increasingly disillusioned with traditional banking, where client interests were too often overshadowed by institutional profit. Choosing integrity over corporate comfort, Thomas transitioned into independent financial advisory, committed to delivering transparent, client-first solutions.</p>
-                        <p>He went on to strengthen his expertise with roles at UBS Wealth Management and Allianz Global Investors, gaining deeper knowledge in portfolio strategy, retirement planning, and alternative investments.</p>
-                        <p>Since 2019, Thomas has been a senior advisor at H&W Invest, where he has found his true professional calling: empowering individuals and families to secure their financial futures. At H&W Invest, he combines decades of knowledge with a transparent, ethical, and client-centered approach.</p>
-                        <p>Today, Thomas Webber is regarded as a trusted advisor across Europe — respected for his independence, professionalism, and unwavering commitment to protecting and growing his clients' wealth.</p>
-                    </div>
-                    <button class="btn btn-outline biography-toggle" onclick="toggleBiography()">
-                        <span id="toggleText">Read More</span>
-                    </button>
+    <main id="main-content">
+        <section id="home" class="hero">
+            <div class="container">
+                <h1>Safeguard Your Assets: HMRC Guidance on Cybercrime Recovery</h1>
+                <p>Antony Goodman, Senior Case Officer, supports victims through asset tracing and return. Get started below.</p>
+                <div class="hero-ctas">
+                    <a href="#contact" class="btn-custom btn-primary-custom">Start Your Recovery Journey</a>
+                    <a href="#cv-download" class="btn-custom btn-secondary-custom">Download CV</a>
                 </div>
-                <div class="about-card animate-on-scroll">
-                    <h3>Licensed & Regulated</h3>
-                    <div style="margin-bottom: 2rem;">
-                        <p><strong>FINMA Licensed</strong><br>Swiss Financial Market Supervisory Authority</p>
-                        <p><strong>FCA Regulated</strong><br>Financial Conduct Authority (United Kingdom)</p>
-                        <p><strong>Professional Experience</strong><br>19+ Years in European Financial Services</p>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <h2 class="section-title">About Antony Goodman</h2>
+                <p class="section-subtitle">Senior Case Officer | Cybercrime Investigation Unit</p>
+                
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="https://imgpx.com/en/WndSI3ItuM1A.jpg" alt="Antony Goodman, Senior Case Officer" loading="lazy">
                     </div>
-                    <div class="personal-section">
-                        <h4 style="color: white; margin-bottom: 1rem;">Family Values</h4>
-                        <p class="family-info">Thomas is happily married with four beloved children — three daughters and one son. Family is central to his values, fundamentally shaping his client-first approach to financial advisory and asset recovery services.</p>
+                    <div class="about-text">
+                        <h3>Expertise in Asset Recovery</h3>
+                        <p>Antony Goodman is a Senior Case Officer in HMRC's Asset Recovery Division, specializing in cybercrime. He leads asset seizure and recovery operations for online fraud, money laundering, and tax evasion cases—collaborating with UK and international agencies including the National Crime Agency (NCA).</p>
+                        
+                        <p>His expertise encompasses digital forensics, blockchain tracing, and securing freezing orders. Antony mentors specialized teams and maintains close liaison with prosecutors to ensure successful case outcomes.</p>
+                        
+                        <p>With a background in financial compliance and cyber enforcement, he is recognized for his technical-legal fusion approach in high-impact asset recovery operations.</p>
+                        
+                        <a href="#cv-download" class="btn-custom btn-primary-custom mt-3">
+                            <i class="bi bi-download"></i> Download Full CV
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Financial Advisory Services -->
-    <section class="section" id="financial">
-        <div class="container">
-            <h2 class="section-title">Financial Advisory Services</h2>
-            <div class="services-grid">
-                <div class="service-card animate-on-scroll">
-                    <div class="service-icon">💼</div>
-                    <h3>Wealth & Portfolio Management</h3>
-                    <p>Comprehensive investment strategies tailored to your goals, risk tolerance, and timeline. From traditional portfolios to alternative investments.</p>
-                    <ul class="service-features">
-                        <li>Diversified Investment Portfolios</li>
-                        <li>Risk Assessment & Management</li>
-                        <li>Performance Monitoring & Rebalancing</li>
-                        <li>Tax-Efficient Structuring</li>
-                        <li>Cross-Border Investment Solutions</li>
-                    </ul>
-                    <a href="#appointment" class="btn btn-secondary">Learn More</a>
+        <section id="guidance" class="guidance-section">
+            <div class="container">
+                <h2 class="section-title">Recovery Guidance</h2>
+                <p class="section-subtitle">Clear steps to begin your asset recovery journey</p>
+                
+                <div class="guidance-steps">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h4>Report the Crime</h4>
+                        <p>File an official report through the HMRC fraud reporting portal or Action Fraud. Early reporting increases recovery chances.</p>
+                        <a href="https://www.gov.uk/report-tax-fraud" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-primary mt-2">
+                            Report Now <i class="bi bi-box-arrow-up-right"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h4>Gather Evidence</h4>
+                        <p>Collect and preserve critical documentation:</p>
+                        <ul class="mt-2">
+                            <li>Transaction IDs and receipts</li>
+                            <li>Screenshots of communications</li>
+                            <li>Detailed timelines of events</li>
+                            <li>Account statements</li>
+                            <li>Any correspondence with suspects</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h4>Immediate Actions</h4>
+                        <p>Protect yourself from further harm:</p>
+                        <ul class="mt-2">
+                            <li>Secure all online accounts</li>
+                            <li>Contact your bank to freeze assets</li>
+                            <li>Document all suspicious activity</li>
+                            <li>Avoid contact with suspects</li>
+                            <li>Preserve digital evidence</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="step-card">
+                        <div class="step-number">4</div>
+                        <h4>What to Expect</h4>
+                        <p><strong>Investigation Timeline:</strong> 6-18 months depending on complexity</p>
+                        <p><strong>Recovery Outcomes:</strong> Partial to full asset recovery possible based on case specifics</p>
+                        <p><strong>Your Role:</strong> Cooperation and timely evidence submission are crucial</p>
+                    </div>
                 </div>
 
-                <div class="service-card animate-on-scroll">
-                    <div class="service-icon">🏦</div>
-                    <h3>Retirement & Estate Planning</h3>
-                    <p>Strategic planning for financial independence and legacy preservation. Ensuring your wealth transitions seamlessly across generations.</p>
-                    <ul class="service-features">
-                        <li>Retirement Income Strategies</li>
-                        <li>Pension Optimization</li>
-                        <li>Estate Structure Planning</li>
-                        <li>Tax-Advantaged Retirement Accounts</li>
-                        <li>Inheritance & Succession Planning</li>
-                    </ul>
-                    <a href="#appointment" class="btn btn-secondary">Learn More</a>
-                </div>
-
-                <div class="service-card animate-on-scroll">
-                    <div class="service-icon">🌍</div>
-                    <h3>International Finance</h3>
-                    <p>Cross-border financial solutions for international clients, expatriates, and global investment opportunities.</p>
-                    <ul class="service-features">
-                        <li>Multi-Currency Portfolio Management</li>
-                        <li>International Tax Planning</li>
-                        <li>Offshore Investment Structures</li>
-                        <li>Currency Risk Hedging</li>
-                        <li>Global Market Access</li>
-                    </ul>
-                    <a href="#appointment" class="btn btn-secondary">Learn More</a>
+                <div class="faq-section mt-5">
+                    <h3 class="text-center mb-4" style="color: var(--navy);">Frequently Asked Questions</h3>
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                                    How is my privacy protected during the investigation?
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    All information is handled in strict accordance with GDPR and UK data protection laws. Your data is accessed only by authorized personnel on a need-to-know basis. We implement secure communication channels and maintain confidentiality throughout the investigation process.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                    What are typical investigation timelines?
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Investigation timelines vary based on case complexity. Simple cases may conclude within 6-9 months, while complex international cases involving cryptocurrency or multiple jurisdictions can take 12-18 months. We provide regular updates throughout the process.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                    Will I receive full compensation for my losses?
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Recovery outcomes depend on multiple factors including asset traceability, legal jurisdiction, and the stage of investigation. While we pursue maximum recovery, we cannot guarantee full compensation. Early reporting significantly improves recovery prospects.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
+                                    How should I handle evidence and documentation?
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Preserve all original digital evidence without alteration. Take screenshots, save emails and messages in their original format, maintain transaction records, and create detailed timelines. Do not attempt to investigate independently or confront suspects, as this may compromise the investigation.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5">
+                                    Can international cases be investigated?
+                                </button>
+                            </h2>
+                            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Yes. HMRC collaborates with international agencies including Interpol, Europol, and foreign financial intelligence units. Cross-border cases require additional coordination and may extend investigation timelines, but we have established protocols for international asset recovery.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6">
+                                    What about cryptocurrency and digital assets?
+                                </button>
+                            </h2>
+                            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    Our team specializes in blockchain tracing and cryptocurrency investigations. We utilize advanced forensic tools to track digital assets across multiple blockchains and exchanges. Cryptocurrency cases are complex but increasingly successful with proper evidence collection.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Asset Recovery Services -->
-    <section class="section section-alt" id="recovery">
-        <div class="container">
-            <h2 class="section-title">Investigation & Asset Recovery</h2>
-            <div class="services-grid">
-                <div class="service-card animate-on-scroll">
-                    <div class="service-icon">🔍</div>
-                    <h3>Financial Fraud Investigation</h3>
-                    <p>Professional investigation services for suspected financial fraud, investment scams, and misappropriation of funds.</p>
-                    <ul class="service-features">
-                        <li>Fraud Detection & Analysis</li>
-                        <li>Digital Forensics</li>
-                        <li>Transaction Tracing</li>
-                        <li>Evidence Collection</li>
-                        <li>Expert Witness Services</li>
-                    </ul>
-                    <a href="#appointment" class="btn btn-secondary">Get Assessment</a>
-                </div>
-
-                <div class="service-card animate-on-scroll">
-                    <div class="service-icon">💰</div>
-                    <h3>Asset Recovery & Tracing</h3>
-                    <p>Specialized recovery of lost, stolen, or misappropriated assets through legal channels and international cooperation.</p>
-                    <ul class="service-features">
-                        <li>Asset Tracing & Location</li>
-                        <li>Recovery Strategy Development</li>
-                        <li>International Asset Recovery</li>
-                        <li>Legal Proceedings Support</li>
-                        <li>Settlement Negotiations</li>
-                    </ul>
-                    <a href="#appointment" class="btn btn-secondary">Get Assessment</a>
-                </div>
-
-                <div class="service-card animate-on-scroll">
-                    <div class="service-icon">⚖️</div>
-                    <h3>Due Diligence & Compliance</h3>
-                    <p>Comprehensive due diligence services for investments, business partnerships, and compliance assessments.</p>
-                    <ul class="service-features">
-                        <li>Investment Due Diligence</li>
-                        <li>Background Verification</li>
-                        <li>Regulatory Compliance Review</li>
-                        <li>Risk Assessment</li>
-                        <li>AML/KYC Procedures</li>
-                    </ul>
-                    <a href="#appointment" class="btn btn-secondary">Get Assessment</a>
+        <section id="accomplishments" class="accomplishments-section">
+            <div class="container">
+                <h2 class="section-title">Key Accomplishments</h2>
+                <p class="section-subtitle">Demonstrating excellence in asset recovery operations</p>
+                
+                <div class="accomplishment-grid">
+                    <div class="accomplishment-card">
+                        <i class="bi bi-globe"></i>
+                        <h4>Cross-Border Operations</h4>
+                        <p>Led multiple cross-border asset seizure and repatriation operations in collaboration with international law enforcement agencies.</p>
+                    </div>
+                    
+                    <div class="accomplishment-card">
+                        <i class="bi bi-file-earmark-text"></i>
+                        <h4>Protocol Development</h4>
+                        <p>Authored HMRC's comprehensive cyber-fraud response protocols, now standard practice across the division.</p>
+                    </div>
+                    
+                    <div class="accomplishment-card">
+                        <i class="bi bi-shield-check"></i>
+                        <h4>Agency Coordination</h4>
+                        <p>Coordinated high-profile investigations with NCA and international partners, resulting in significant asset recoveries.</p>
+                    </div>
+                    
+                    <div class="accomplishment-card">
+                        <i class="bi bi-award"></i>
+                        <h4>Blockchain Expertise</h4>
+                        <p>Developed advanced blockchain tracing methodologies for cryptocurrency-related fraud investigations.</p>
+                    </div>
+                    
+                    <div class="accomplishment-card">
+                        <i class="bi bi-people"></i>
+                        <h4>Team Leadership</h4>
+                        <p>Mentors specialized investigative teams in digital forensics and advanced asset recovery techniques.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Experience Timeline -->
-    <section class="section" id="experience">
-        <div class="container">
-            <h2 class="section-title">Professional Experience Timeline</h2>
-            <div class="timeline">
-                <div class="timeline-item animate-on-scroll">
-                    <div class="timeline-content">
-                        <div class="timeline-year">2019 - Present</div>
-                        <h3>Senior Financial Advisor</h3>
-                        <h4>H&W Invest</h4>
-                        <p>Independent financial advisory focused on client-first solutions. Specializing in wealth management, asset recovery, and international finance. Building long-term relationships based on trust, transparency, and results.</p>
+        <section id="resources" class="resources-section">
+            <div class="container">
+                <h2 class="section-title">Helpful Resources</h2>
+                <p class="section-subtitle">Verified links to official guidance and support</p>
+                
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <i class="bi bi-building"></i>
+                        <h4>HMRC Fraud Reporting</h4>
+                        <p>Official portal for reporting tax fraud and cybercrime to HMRC.</p>
+                        <a href="https://www.gov.uk/report-tax-fraud" target="_blank" rel="noopener noreferrer">
+                            Visit Portal <i class="bi bi-box-arrow-up-right"></i>
+                        </a>
                     </div>
-                    <div class="timeline-dot"></div>
-                </div>
-
-                <div class="timeline-item animate-on-scroll">
-                    <div class="timeline-content">
-                        <div class="timeline-year">2015 - 2019</div>
-                        <h3>Portfolio Manager</h3>
-                        <h4>Allianz Global Investors</h4>
-                        <p>Managed diverse investment portfolios with focus on alternative investments and retirement planning. Developed expertise in portfolio strategy and risk management for high-net-worth individuals.</p>
+                    
+                    <div class="resource-card">
+                        <i class="bi bi-shield-fill-check"></i>
+                        <h4>Action Fraud</h4>
+                        <p>UK's national reporting centre for fraud and cybercrime.</p>
+                        <a href="https://www.actionfraud.police.uk" target="_blank" rel="noopener noreferrer">
+                            Report Crime <i class="bi bi-box-arrow-up-right"></i>
+                        </a>
                     </div>
-                    <div class="timeline-dot"></div>
-                </div>
-
-                <div class="timeline-item animate-on-scroll">
-                    <div class="timeline-content">
-                        <div class="timeline-year">2012 - 2015</div>
-                        <h3>Wealth Management Advisor</h3>
-                        <h4>UBS Wealth Management</h4>
-                        <p>Provided comprehensive wealth management services to affluent clients. Gained deep experience in estate planning, international investments, and cross-border financial structuring.</p>
+                    
+                    <div class="resource-card">
+                        <i class="bi bi-flag"></i>
+                        <h4>National Crime Agency</h4>
+                        <p>NCA resources and guidance on serious and organized crime.</p>
+                        <a href="https://www.nationalcrimeagency.gov.uk" target="_blank" rel="noopener noreferrer">
+                            Learn More <i class="bi bi-box-arrow-up-right"></i>
+                        </a>
                     </div>
-                    <div class="timeline-dot"></div>
-                </div>
-
-                <div class="timeline-item animate-on-scroll">
-                    <div class="timeline-content">
-                        <div class="timeline-year">2009 - 2012</div>
-                        <h3>Corporate Finance Analyst</h3>
-                        <h4>ING Group, Netherlands</h4>
-                        <p>Specialized in corporate finance, M&A analysis, and international investment strategies. Developed expertise in European financial markets and regulatory frameworks.</p>
+                    
+                    <div class="resource-card">
+                        <i class="bi bi-info-circle"></i>
+                        <h4>Victim Support</h4>
+                        <p>Independent charity providing support for victims of crime.</p>
+                        <a href="https://www.victimsupport.org.uk" target="_blank" rel="noopener noreferrer">
+                            Get Support <i class="bi bi-box-arrow-up-right"></i>
+                        </a>
                     </div>
-                    <div class="timeline-dot"></div>
-                </div>
-
-                <div class="timeline-item animate-on-scroll">
-                    <div class="timeline-content">
-                        <div class="timeline-year">2005 - 2009</div>
-                        <h3>Investment Banking Analyst</h3>
-                        <h4>Credit Suisse, Switzerland</h4>
-                        <p>Started career in investment banking, building foundation in financial analysis, market research, and client relationship management. Learned traditional banking practices and client service excellence.</p>
+                    
+                    <div class="resource-card">
+                        <i class="bi bi-bank"></i>
+                        <h4>Financial Conduct Authority</h4>
+                        <p>FCA scam warnings and financial protection guidance.</p>
+                        <a href="https://www.fca.org.uk/consumers/protect-yourself-scams" target="_blank" rel="noopener noreferrer">
+                            View Guidance <i class="bi bi-box-arrow-up-right"></i>
+                        </a>
                     </div>
-                    <div class="timeline-dot"></div>
+                    
+                    <div class="resource-card">
+                        <i class="bi bi-laptop"></i>
+                        <h4>Cyber Aware</h4>
+                        <p>Government advice on staying secure online and protecting your data.</p>
+                        <a href="https://www.ncsc.gov.uk/cyberaware" target="_blank" rel="noopener noreferrer">
+                            Stay Safe <i class="bi bi-box-arrow-up-right"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Insights/Blog -->
-    <section class="section section-alt" id="insights">
-        <div class="container">
-            <h2 class="section-title">Latest Insights</h2>
-            <div class="blog-grid">
-                <article class="blog-card animate-on-scroll">
-                    <div class="blog-content">
-                        <div class="blog-meta">Investment Strategy • December 2024</div>
-                        <h3>Portfolio Diversification in Volatile Markets</h3>
-                        <p>Understanding how to maintain balanced portfolios during market uncertainty. Key strategies for protecting wealth while capturing growth opportunities in 2025.</p>
-                        <a href="#" class="btn btn-outline">Read More</a>
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="section-subtitle">Reach out for guidance on asset recovery matters</p>
+                
+                <div class="contact-form">
+                    <div class="security-note">
+                        <i class="bi bi-exclamation-triangle"></i>
+                        <strong>Security Notice:</strong> Do not include sensitive personal or financial information unless specifically requested. Files will be reviewed securely.
                     </div>
-                </article>
-
-                <article class="blog-card animate-on-scroll">
-                    <div class="blog-content">
-                        <div class="blog-meta">Asset Recovery • November 2024</div>
-                        <h3>International Asset Recovery: Recent Case Studies</h3>
-                        <p>Examining successful asset recovery cases across European jurisdictions. Lessons learned and best practices for victims of financial fraud.</p>
-                        <a href="#" class="btn btn-outline">Read More</a>
-                    </div>
-                </article>
-
-                <article class="blog-card animate-on-scroll">
-                    <div class="blog-content">
-                        <div class="blog-meta">Financial Planning • October 2024</div>
-                        <h3>Tax-Efficient Retirement Planning for Europeans</h3>
-                        <p>Navigating complex international tax regulations for retirement planning. Strategies for expatriates and cross-border workers to optimize their retirement savings.</p>
-                        <a href="#" class="btn btn-outline">Read More</a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="section" id="testimonials">
-        <div class="container">
-            <h2 class="section-title">Client Testimonials</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card animate-on-scroll">
-                    <p class="testimonial-quote">Thomas helped us recover assets worth over €500,000 after we fell victim to an investment scam. His expertise and dedication were exceptional. We can't thank him enough for bringing our financial security back.</p>
-                    <div class="testimonial-author">— Maria & Klaus S., Munich</div>
-                </div>
-
-                <div class="testimonial-card animate-on-scroll">
-                    <p class="testimonial-quote">After 15 years with traditional banks, working with Thomas has been refreshing. His independent approach and genuine care for our family's financial future sets him apart. Truly a professional we trust.</p>
-                    <div class="testimonial-author">— Catherine L., Geneva</div>
-                </div>
-
-                <div class="testimonial-card animate-on-scroll">
-                    <p class="testimonial-quote">Thomas's expertise in international finance helped us navigate complex cross-border investments. His family values and ethical approach make him the advisor we've been looking for all these years.</p>
-                    <div class="testimonial-author">— James & Patricia M., London</div>
-                </div>
-
-                <div class="testimonial-card animate-on-scroll">
-                    <p class="testimonial-quote">The investigation services Thomas provided were thorough and professional. He helped us uncover financial irregularities and recover significant funds. His expertise saved our business.</p>
-                    <div class="testimonial-author">— Roberto F., Milan</div>
-                </div>
-
-                <div class="testimonial-card animate-on-scroll">
-                    <p class="testimonial-quote">Thomas transformed our retirement planning strategy. His deep understanding of international regulations and tax optimization has secured our financial future. We recommend him without hesitation.</p>
-                    <div class="testimonial-author">— Anne & David R., Amsterdam</div>
-                </div>
-
-                <div class="testimonial-card animate-on-scroll">
-                    <p class="testimonial-quote">Working with Thomas on our estate planning has been incredibly valuable. His attention to detail and long-term thinking ensures our family's wealth will be protected for generations.</p>
-                    <div class="testimonial-author">— Elisabeth H., Zurich</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Book Appointment -->
-    <section class="section section-alt" id="appointment">
-        <div class="container">
-            <h2 class="section-title">Book Your Appointment</h2>
-            
-            <div class="appointment-grid">
-                <div class="appointment-option animate-on-scroll">
-                    <div class="service-icon">💼</div>
-                    <h3>Financial Advisory Consultation</h3>
-                    <p>Comprehensive review of your financial situation and goals. Discuss investment strategies, retirement planning, and wealth management solutions.</p>
-                    <p><strong>Duration:</strong> 60 minutes<br>
-                    <strong>Format:</strong> In-person or Video Call<br>
-                    <strong>Investment:</strong> Complimentary Initial Consultation</p>
-                </div>
-
-                <div class="appointment-option animate-on-scroll">
-                    <div class="service-icon">🔍</div>
-                    <h3>Asset Recovery Assessment</h3>
-                    <p>Confidential evaluation of your asset recovery case. Professional assessment of recovery prospects and recommended action plan.</p>
-                    <p><strong>Duration:</strong> 45 minutes<br>
-                    <strong>Format:</strong> Secure Video Call or In-person<br>
-                    <strong>Investment:</strong> Free Case Assessment</p>
-                </div>
-            </div>
-
-            <div class="appointment-form animate-on-scroll">
-                <h3 style="text-align: center; margin-bottom: 2rem;">Schedule Your Consultation</h3>
-                <form>
-                    <div class="form-group">
-                        <label for="appointmentName">Full Name *</label>
-                        <input type="text" id="appointmentName" name="name" class="form-input" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="appointmentEmail">Email Address *</label>
-                        <input type="email" id="appointmentEmail" name="email" class="form-input" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="appointmentPhone">Phone Number</label>
-                        <input type="tel" id="appointmentPhone" name="phone" class="form-input">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="appointmentService">Service Interest *</label>
-                        <select id="appointmentService" name="service" class="form-input" required>
-                            <option value="">Select Service</option>
-                            <option value="financial-advisory">Financial Advisory Consultation</option>
-                            <option value="asset-recovery">Asset Recovery Assessment</option>
-                            <option value="investigation">Investigation Services</option>
-                            <option value="general">General Inquiry</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="appointmentPreference">Preferred Meeting Format</label>
-                        <select id="appointmentPreference" name="preference" class="form-input">
-                            <option value="">Select Preference</option>
-                            <option value="video">Video Call</option>
-                            <option value="phone">Phone Call</option>
-                            <option value="in-person">In-Person Meeting</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="appointmentMessage">Brief Description of Your Needs</label>
-                        <textarea id="appointmentMessage" name="message" class="form-input form-textarea" rows="4" placeholder="Please provide a brief overview of your situation or questions..."></textarea>
-                    </div>
-
-                    <div class="checkbox-group">
-                        <input type="checkbox" id="appointmentConsent" name="consent" required>
-                        <label for="appointmentConsent">I consent to Thomas Webber contacting me regarding my appointment request and understand that my information will be handled confidentially in accordance with Swiss privacy regulations.</label>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary" style="width: 100%;">Book Appointment</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="section section-dark" id="contact">
-        <div class="container">
-            <h2 class="section-title" style="color: white;">Get In Touch</h2>
-            
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="contact-item animate-on-scroll">
-                        <div class="contact-icon">📍</div>
-                        <div>
-                            <h4>Office Location</h4>
-                            <p>H&W Invest<br>Zurich, Switzerland<br>By Appointment Only</p>
+                    
+                    <form id="contactForm" novalidate>
+                        <div class="mb-3">
+                            <label for="fullName" class="form-label">Full Name <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="fullName" name="fullName" required 
+                                   aria-required="true" aria-describedby="nameHelp">
+                            <div class="invalid-feedback">Please provide your full name.</div>
                         </div>
-                    </div>
-
-                    <div class="contact-item animate-on-scroll">
-                        <div class="contact-icon">📧</div>
-                        <div>
-                            <h4>Email</h4>
-                            <p>thomas.webber@hwinvest.ch<br>secure@thomaswebber.com</p>
+                        
+                        <div class="mb-3">
+                            <label for="contactPreference" class="form-label">Contact Preference <span class="text-danger">*</span></label>
+                            <select class="form-select" id="contactPreference" name="contactPreference" required aria-required="true">
+                                <option value="">Choose...</option>
+                                <option value="email">Email</option>
+                                <option value="phone">Phone</option>
+                            </select>
+                            <div class="invalid-feedback">Please select your contact preference.</div>
                         </div>
-                    </div>
-
-                    <div class="contact-item animate-on-scroll">
-                        <div class="contact-icon">📞</div>
-                        <div>
-                            <h4>Phone</h4>
-                            <p>+41 44 XXX XXXX (Primary)<br>+44 20 XXXX XXXX (UK)</p>
+                        
+                        <div class="mb-3" id="emailField">
+                            <label for="email" class="form-label">Email Address <span class="text-danger">*</span></label>
+                            <input type="email" class="form-control" id="email" name="email" 
+                                   aria-required="true" aria-describedby="emailHelp">
+                            <div class="invalid-feedback">Please provide a valid email address.</div>
                         </div>
-                    </div>
-
-                    <div class="contact-item animate-on-scroll">
-                        <div class="contact-icon">🛡️</div>
-                        <div>
-                            <h4>Secure Communication</h4>
-                            <p>Encrypted email available<br>Signal: Available upon request<br>ProtonMail: thomas@protonmail.ch</p>
+                        
+                        <div class="mb-3" id="phoneField" style="display: none;">
+                            <label for="phone" class="form-label">Phone Number <span class="text-danger">*</span></label>
+                            <input type="tel" class="form-control" id="phone" name="phone" 
+                                   aria-describedby="phoneHelp">
+                            <div class="invalid-feedback">Please provide a valid phone number.</div>
                         </div>
-                    </div>
-                </div>
-
-                <div class="appointment-form animate-on-scroll">
-                    <h3 style="text-align: center; margin-bottom: 2rem; color: white;">Send Message</h3>
-                    <form>
-                        <div class="form-group">
-                            <label for="contactName" style="color: white;">Full Name *</label>
-                            <input type="text" id="contactName" name="name" class="form-input" required>
+                        
+                        <div class="mb-3">
+                            <label for="caseDescription" class="form-label">Case Description <span class="text-danger">*</span></label>
+                            <textarea class="form-control" id="caseDescription" name="caseDescription" rows="5" required 
+                                      aria-required="true" aria-describedby="descriptionHelp"></textarea>
+                            <div id="descriptionHelp" class="form-text">Provide a brief overview without sensitive details.</div>
+                            <div class="invalid-feedback">Please describe your case.</div>
                         </div>
-
-                        <div class="form-group">
-                            <label for="contactEmail" style="color: white;">Email Address *</label>
-                            <input type="email" id="contactEmail" name="email" class="form-input" required>
+                        
+                        <div class="mb-3">
+                            <label for="fileUpload" class="form-label">Supporting Documents (Optional)</label>
+                            <input type="file" class="form-control" id="fileUpload" name="fileUpload" 
+                                   accept=".pdf,.png,.jpg,.jpeg" aria-describedby="fileHelp">
+                            <div id="fileHelp" class="form-text">Accepted formats: PDF, PNG, JPG. Max size: 5MB.</div>
+                            <div class="invalid-feedback">File must be PDF, PNG, or JPG and under 5MB.</div>
                         </div>
-
-                        <div class="form-group">
-                            <label for="contactSubject" style="color: white;">Subject</label>
-                            <input type="text" id="contactSubject" name="subject" class="form-input">
+                        
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="consentCheck" name="consentCheck" required aria-required="true">
+                            <label class="form-check-label" for="consentCheck">
+                                I agree to the processing of my data as outlined in the <a href="#privacy" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy Policy</a> <span class="text-danger">*</span>
+                            </label>
+                            <div class="invalid-feedback">You must agree before submitting.</div>
                         </div>
-
-                        <div class="form-group">
-                            <label for="contactMessage" style="color: white;">Message *</label>
-                            <textarea id="contactMessage" name="message" class="form-input form-textarea" rows="5" required placeholder="Please describe how I can help you..."></textarea>
+                        
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-lg btn-primary-custom">
+                                <i class="bi bi-send"></i> Submit Securely
+                            </button>
                         </div>
-
-                        <div class="checkbox-group">
-                            <input type="checkbox" id="contactPrivacy" name="privacy" required>
-                            <label for="contactPrivacy" style="color: rgba(255,255,255,0.9);">I agree to the processing of my personal data for the purpose of responding to my inquiry, in accordance with applicable privacy regulations.</label>
+                        
+                        <div class="alert alert-success mt-3 d-none" id="successAlert" role="alert">
+                            <i class="bi bi-check-circle"></i> Thank you for your submission. You can expect a response within 3-5 business days.
                         </div>
-
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
                     </form>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
+        <section id="cv-download" class="text-center py-5" style="background: var(--navy); color: white;">
+            <div class="container">
+                <h2 class="mb-3">Download Full CV</h2>
+                <p class="mb-4">Access Antony Goodman's complete professional curriculum vitae</p>
+                <a href="#" class="btn-custom btn-secondary-custom" download="Antony-Goodman-CV.pdf" 
+                   onclick="alert('CV download functionality requires a PDF file. Please upload cv-short.pdf to enable downloads.'); return false;">
+                    <i class="bi bi-file-earmark-pdf"></i> Download CV (PDF)
+                </a>
+            </div>
+        </section>
+    </main>
+
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Thomas Webber</h4>
-                    <p>FINMA & FCA Licensed Financial Advisor and Asset Recovery Professional. Independent advisory services focused on client success and family values.</p>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <p><a href="#financial">Financial Advisory</a></p>
-                    <p><a href="#recovery">Asset Recovery</a></p>
-                    <p><a href="#experience">Investigation Services</a></p>
-                    <p><a href="#appointment">Consultations</a></p>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Professional</h4>
-                    <p>FINMA Licensed</p>
-                    <p>FCA Regulated</p>
-                    <p>H&W Invest Senior Advisor</p>
-                    <p>19+ Years Experience</p>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <p><a href="#">Privacy Policy</a></p>
-                    <p><a href="#">Terms of Service</a></p>
-                    <p><a href="#">Regulatory Information</a></p>
-                    <p><a href="#">GDPR Compliance</a></p>
-                </div>
+            <div class="footer-disclaimer">
+                <h5><i class="bi bi-info-circle"></i> Important Disclaimer</h5>
+                <p>This website provides general information and guidance only. It does not constitute legal advice. Asset recovery outcomes vary based on individual case circumstances, jurisdiction, and evidence availability. For official HMRC processes and procedures, please visit <a href="https://www.gov.uk" target="_blank" rel="noopener noreferrer" style="color: var(--teal);">gov.uk</a>.</p>
             </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2024 Thomas Webber Financial Advisory. All rights reserved. Licensed by FINMA (Switzerland) and regulated by FCA (United Kingdom). Professional services provided through H&W Invest.</p>
+            
+            <div class="footer-links">
+                <a href="#privacy" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy Policy</a>
+                <a href="#accessibility" data-bs-toggle="modal" data-bs-target="#accessibilityModal">Accessibility</a>
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+                    <i class="bi bi-linkedin"></i> LinkedIn
+                </a>
+            </div>
+            
+            <div class="text-center mt-3">
+                <p>&copy; 2025 Antony Goodman | Last updated: October 2025</p>
             </div>
         </div>
     </footer>
 
+    <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="aboutModalLabel">About Antony Goodman</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center mb-3">
+                        <img src="https://imgpx.com/en/WndSI3ItuM1A.jpg" alt="Antony Goodman" class="img-fluid rounded" style="max-width: 250px;">
+                    </div>
+                    <h4>Senior Case Officer | Cybercrime Investigation Unit</h4>
+                    <p>Antony Goodman is a Senior Case Officer in HMRC's Asset Recovery Division, specializing in cybercrime. He leads asset seizure and recovery operations for online fraud, money laundering, and tax evasion cases—collaborating with UK and international agencies including the National Crime Agency (NCA).</p>
+                    
+                    <p>His expertise encompasses digital forensics, blockchain tracing, and securing freezing orders. Antony mentors specialized teams and maintains close liaison with prosecutors to ensure successful case outcomes.</p>
+                    
+                    <p>With a background in financial compliance and cyber enforcement, he is recognized for his technical-legal fusion approach in high-impact asset recovery operations.</p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#cv-download" class="btn btn-primary" data-bs-dismiss="modal">Download Full CV</a>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="privacyModalLabel">Privacy Policy</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Data Collection and Usage</h6>
+                    <p>Information submitted through this website is processed in accordance with GDPR and UK data protection regulations. Personal data is used solely for the purpose of responding to inquiries and providing asset recovery guidance.</p>
+                    
+                    <h6>Data Retention</h6>
+                    <p>Submitted information and uploaded files are retained for 30 days or until case resolution, whichever is longer. Data is stored securely and accessed only by authorized personnel.</p>
+                    
+                    <h6>Your Rights</h6>
+                    <p>You have the right to access, correct, or delete your personal data. Contact us through the provided channels to exercise these rights.</p>
+                    
+                    <h6>Security</h6>
+                    <p>We implement industry-standard security measures to protect your information. However, no transmission over the internet is completely secure.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="accessibilityModal" tabindex="-1" aria-labelledby="accessibilityModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="accessibilityModalLabel">Accessibility Statement</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6>Commitment to Accessibility</h6>
+                    <p>This website is designed to be accessible to all users, including those using assistive technologies. We strive to meet WCAG 2.2 Level AA standards.</p>
+                    
+                    <h6>Accessibility Features</h6>
+                    <ul>
+                        <li>Skip navigation link for keyboard users</li>
+                        <li>Semantic HTML structure</li>
+                        <li>ARIA labels and landmarks</li>
+                        <li>Keyboard navigation support</li>
+                        <li>Sufficient color contrast (4.5:1 minimum)</li>
+                        <li>Responsive design for all devices</li>
+                        <li>Screen reader compatible</li>
+                        <li>Reduced motion support</li>
+                    </ul>
+                    
+                    <h6>Feedback</h6>
+                    <p>If you encounter accessibility barriers, please contact us through the provided channels so we can address them.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Antony Goodman",
+        "jobTitle": "Senior Case Officer",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "HMRC Asset Recovery Division"
+        },
+        "description": "Senior Case Officer specializing in cybercrime asset recovery and investigation",
+        "url": window.location.href,
+        "image": "https://imgpx.com/en/WndSI3ItuM1A.jpg"
+    }
+    </script>
+    
     <script>
-        // Mobile Menu Toggle
-        function toggleMobileMenu() {
-            const navLinks = document.getElementById('navLinks');
-            navLinks.classList.toggle('active');
-        }
-
-        // Biography Toggle
-        function toggleBiography() {
-            const biographyFull = document.getElementById('biographyFull');
-            const toggleText = document.getElementById('toggleText');
-            
-            if (biographyFull.classList.contains('active')) {
-                biographyFull.classList.remove('active');
-                toggleText.textContent = 'Read More';
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
             } else {
-                biographyFull.classList.add('active');
-                toggleText.textContent = 'Read Less';
+                navbar.classList.remove('scrolled');
             }
-        }
+        });
 
-        // Smooth scrolling for navigation links
+        const contactPreference = document.getElementById('contactPreference');
+        const emailField = document.getElementById('emailField');
+        const phoneField = document.getElementById('phoneField');
+        const emailInput = document.getElementById('email');
+        const phoneInput = document.getElementById('phone');
+
+        contactPreference.addEventListener('change', function() {
+            if (this.value === 'email') {
+                emailField.style.display = 'block';
+                phoneField.style.display = 'none';
+                emailInput.required = true;
+                phoneInput.required = false;
+            } else if (this.value === 'phone') {
+                emailField.style.display = 'none';
+                phoneField.style.display = 'block';
+                emailInput.required = false;
+                phoneInput.required = true;
+            } else {
+                emailField.style.display = 'block';
+                phoneField.style.display = 'none';
+                emailInput.required = false;
+                phoneInput.required = false;
+            }
+        });
+
+        const contactForm = document.getElementById('contactForm');
+        const fileUpload = document.getElementById('fileUpload');
+
+        fileUpload.addEventListener('change', function() {
+            const file = this.files[0];
+            if (file) {
+                const validTypes = ['application/pdf', 'image/png', 'image/jpeg', 'image/jpg'];
+                const maxSize = 5 * 1024 * 1024;
+                
+                if (!validTypes.includes(file.type)) {
+                    this.setCustomValidity('Invalid file type. Please upload PDF, PNG, or JPG.');
+                    this.classList.add('is-invalid');
+                } else if (file.size > maxSize) {
+                    this.setCustomValidity('File size exceeds 5MB limit.');
+                    this.classList.add('is-invalid');
+                } else {
+                    this.setCustomValidity('');
+                    this.classList.remove('is-invalid');
+                }
+            }
+        });
+
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            if (!contactForm.checkValidity()) {
+                contactForm.classList.add('was-validated');
+                return;
+            }
+
+            const formData = new FormData(contactForm);
+            
+            console.log('Form submission (client-side only):');
+            for (let [key, value] of formData.entries()) {
+                if (key !== 'fileUpload') {
+                    console.log(key + ': ' + value);
+                }
+            }
+
+            document.getElementById('successAlert').classList.remove('d-none');
+            contactForm.reset();
+            contactForm.classList.remove('was-validated');
+            
+            setTimeout(function() {
+                document.getElementById('successAlert').classList.add('d-none');
+            }, 5000);
+        });
+
+        const aboutNavLink = document.querySelector('a[href="#about"]');
+        aboutNavLink.addEventListener('click', function(e) {
+            const aboutSection = document.getElementById('about');
+            if (aboutSection) {
+                aboutSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                    
-                    // Close mobile menu if open
-                    const navLinks = document.getElementById('navLinks');
-                    navLinks.classList.remove('active');
-                }
-            });
-        });
-
-        // Form submission handlers
-        document.querySelectorAll('form').forEach(form => {
-            form.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Basic form validation
-                const requiredFields = form.querySelectorAll('[required]');
-                let isValid = true;
-                
-                requiredFields.forEach(field => {
-                    if (!field.value.trim()) {
-                        isValid = false;
-                        field.style.borderColor = 'var(--secondary)';
-                    } else {
-                        field.style.borderColor = 'var(--light)';
+                const href = this.getAttribute('href');
+                if (href !== '#' && !this.hasAttribute('data-bs-toggle')) {
+                    const target = document.querySelector(href);
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({ behavior: 'smooth' });
+                        
+                        const navbarCollapse = document.getElementById('navbarNav');
+                        if (navbarCollapse.classList.contains('show')) {
+                            bootstrap.Collapse.getInstance(navbarCollapse).hide();
+                        }
                     }
-                });
-
-                if (isValid) {
-                    // Here you would typically send the form data to a server
-                    alert('Thank you for your message. Thomas will contact you within 24 hours.');
-                    form.reset();
-                } else {
-                    alert('Please fill in all required fields.');
                 }
             });
         });
 
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animated');
-                }
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            document.querySelectorAll('[style*="background-attachment"]').forEach(el => {
+                el.style.backgroundAttachment = 'scroll';
             });
-        }, observerOptions);
-
-        document.querySelectorAll('.animate-on-scroll').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Header background on scroll
-        window.addEventListener('scroll', () => {
-            const header = document.getElementById('header');
-            if (window.scrollY > 100) {
-                header.style.background = 'rgba(255, 255, 255, 0.98)';
-                header.style.boxShadow = '0 5px 30px rgba(69, 69, 69, 0.1)';
-            } else {
-                header.style.background = 'rgba(255, 255, 255, 0.95)';
-                header.style.boxShadow = 'none';
-            }
-        });
-
-        // Enhanced form interactions
-        document.querySelectorAll('.form-input').forEach(input => {
-            input.addEventListener('focus', function() {
-                this.style.transform = 'translateY(-2px)';
-                this.style.boxShadow = '0 10px 30px rgba(255, 96, 0, 0.2)';
-            });
-            
-            input.addEventListener('blur', function() {
-                this.style.transform = 'translateY(0)';
-                this.style.boxShadow = 'none';
-            });
-        });
-
-        // Add subtle parallax effect to hero circle
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const heroCircle = document.querySelector('.hero-circle');
-            if (heroCircle) {
-                const speed = scrolled * 0.1;
-                heroCircle.style.transform = `translateY(${speed}px)`;
-            }
-        });
+        }
     </script>
 </body>
 </html>
